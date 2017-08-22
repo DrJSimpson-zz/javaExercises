@@ -3,8 +3,15 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String args[]) {
 		int[] arreglo = {15,32,48,3,21,1,1,5};
-		swap(arreglo, 0, 1);
-		swap(arreglo, 2, 4);
+		//swap(arreglo, 0, 1);
+		//swap(arreglo, 2, 4);
+		mostrarArreglo(arreglo);
+		for (int i = arreglo.length - 1; i >= 1; i--) {
+			if (arreglo[i] < arreglo[i - 1]) {
+				swap(arreglo, i, i-1);
+			}
+		}
+		System.out.println("-------------");
 		mostrarArreglo(arreglo);
 
 	}
