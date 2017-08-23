@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
 	public static void main(String args[]) {
 		int[] arreglo = {15,32,48,3,21,1,1,5};
+		//mostrarArreglo(arreglo);
 		//swap(arreglo, 0, 1);
 		//swap(arreglo, 2, 4);
 		mostrarArreglo(arreglo);
