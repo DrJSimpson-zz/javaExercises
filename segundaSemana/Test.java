@@ -31,6 +31,10 @@ class Auto2 {
     int cambio;
     int velocidad;
 
+    //crear un método que muestre por pantalla la velocidad en forma de
+    //kilometos/hora
+    //
+    //aprovechar ese método en el toString()
     public void calcularVelocidad() {
         if (cambio == 1) {
             this.velocidad = this.rpm / 100;
