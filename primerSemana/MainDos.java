@@ -13,8 +13,21 @@ public class MainDos {
 			m2(arreglo, i);
 		}*/
 
-		for (int i = arreglo2.length-1; i > 1; i--) {
+		/*for (int i = arreglo2.length-1; i > 1; i--) {
 			m3(arreglo2, i);
+		}*/
+
+		int min = 1;
+		int max = arreglo.length - 1;
+		while (max - min > 1) {
+			m2(arreglo2, min);
+			min++;
+			if (max - min < 1) {
+				continue;
+			}
+			m3(arreglo2, max);
+			max--;
+
 		}
 
 		System.out.println("Cantidad de pasadas:" + cantPasadas1);
