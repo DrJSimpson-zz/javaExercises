@@ -27,14 +27,15 @@ public class Test {
 }
 
 class Auto2 {
+    //esconder estos atributos, y corregir el c√≥digo que accede directamente
     int rpm;
     int cambio;
     int velocidad;
 
-    //crear un mÈtodo que muestre por pantalla la velocidad en forma de
+    //crear un m√©todo que muestre por pantalla la velocidad en forma de
     //kilometos/hora
     //
-    //aprovechar ese mÈtodo en el toString()
+    //aprovechar ese m√©todo en el toString()
     public void calcularVelocidad() {
         if (cambio == 1) {
             this.velocidad = this.rpm / 100;
