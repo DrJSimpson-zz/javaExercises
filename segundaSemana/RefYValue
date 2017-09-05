@@ -1,0 +1,29 @@
+/**
+ *
+ * @author gbene
+ */
+public class RefYValue {
+    public static void main(String[] args) {
+        //Ejemplo de pasaje por valor o copia a una funcion o procedimiento
+        int s1 = 2;
+        int s2 = 4;
+        mono(s1, s2);
+        System.out.println("s1 que se pasó como parámtero a sumar " + s1);
+        
+        //Ejemplo de pasaje por referencia
+        int[] arreglo = { 34, 23, 13, 45};
+        System.out.println("arreglo en posición 0 = " + arreglo[0]);
+        poner666EnLaPrimerPosicion(arreglo);
+        System.out.println("arreglo en posición 0 = " + arreglo[0]);
+    }
+    
+    public static void mono(int a, int b) {
+        a = 309583409;
+        System.out.println("a en sumar = " + a);
+    }
+    
+    public static void poner666EnLaPrimerPosicion(int[] a) {
+        System.out.println("Llamo a poner666EnLaPrimerPosicion");
+        a[0] = 666;
+    }
+}
