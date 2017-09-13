@@ -5,17 +5,25 @@ public class Polimorfismo {
         //Object test = c;
         
         System.out.println(o);
+	//El método getClass, me devuelve NO EL TIPO DE LA VARIABLE DE
+	//REFERENCIA, SINO EL TIPO DEL OBJETO al que me estoy refiriendo
         System.out.println(o.getClass());
+	//Object
         
         System.out.println("hago o = c, es decir object = corredor");
         //System.out.println(c);
+	//Esto se puede lograr gracias a que en Java, todas las clases heredan
+	//de la clase object
         o = c;
         System.out.println(o);
+	//Corredor.toString()
         System.out.println(o.getClass());
+	//La clase mostrada es Corredor
         
     }
 }
 
+//Defino una clase Corredor con cierto comportamiento
 class Corredor {
     String nombre;
     String apellido;
@@ -45,6 +53,9 @@ class Corredor {
         }
     }
 
+
+    //Está comentado, pero la única sobreescritura que realizo es al métood
+    //toString() de la clase Object
     //@Override
     //public String toString() {
     //    return "Corredor{" + "nombre=" + nombre + ", apellido=" + apellido + ", ubicaci\u00f3n=" + ubicacion + ", velocidad=" + velocidad + '}';
