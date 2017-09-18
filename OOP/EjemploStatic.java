@@ -8,6 +8,19 @@ public class EjemploStatic {
 		//Creo otra instanca de la clase Test
 		Test t2 = new Test();
 		t2.num = 20;
+		
+		//Utilizo factory y uso una referencia en el main
+		Test t3 = Test.testFactory();
+		
+		//Clono el objeto t2 y verifico que son objetos distintos
+		Test t4 = t2.clonar();
+		t4.num = 10;
+		t2.num = 15;
+		
+		System.out.println("Verifico si t4 y t2 son objetos distintos");
+		System.out.println(t4.num == t2.num);
+		
+		
 		System.out.println(t1.getNum() + " " + Test.snum);
 		System.out.println(t2.getNum()  + " " + t2.snum);
 	}
@@ -45,8 +58,8 @@ class Test {
 
 	//Este método debe clonar una instancia
 	public Test clonar() {
-		
-	}
-	
-	
+		Test clon = new Test();
+		clon.num = this.num;
+		return clon;
+	}	
 }
