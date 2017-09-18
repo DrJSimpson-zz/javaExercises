@@ -1,0 +1,46 @@
+public class Clonando {
+
+	public static void main(String[] args) {
+		//Comportamiento con el clone criollo que hicimos
+		Auto a = new Auto("Ford", "Mustang");
+		Auto b = a.clonar();
+		b.modelo = "Corvette";
+		b.marca = "Chevrolet";
+		
+		System.out.println(a);
+		System.out.println(b);
+		//Pregunta a == b en este caso apuntan a objetos
+		//distintos
+		System.out.println(a == b);
+		
+		//Si usamos la misma referencia
+		a = b;
+		a.marca = "Mitsubishi";
+		b.modelo = "Lancer";
+		System.out.println(a);
+		System.out.println(b);
+		//Pregunta a == b en este caso apuntan al mismo
+		//objeto
+		System.out.println(a == b);
+	}
+}
+
+class Auto {
+	String marca;
+	String modelo;
+	
+	public Auto(String marca, String modelo) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+	}
+	
+	public Auto clonar() {
+		return new Auto(this.marca, this.modelo);
+	}
+
+	@Override
+	public String toString() {
+		return "Auto [marca=" + marca + ", modelo=" + modelo + "]";
+	}
+}
